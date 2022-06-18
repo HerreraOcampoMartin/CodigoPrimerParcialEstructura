@@ -78,11 +78,11 @@ void imprimirListaDoblementeEnlazada(ListaDoblementeEnlazada *lista){
     NodoDoblementeEnlazado *aux = lista->primero;
 
     if(aux == NULL){
-        printf("La lista esta vacía.\n");
+        printf("La lista doblemente enlazada esta vacía.\n");
         return;
     }
 
-    printf("\nLista:\n");
+    printf("\nLista doblemente enlazada:\n");
     for(; aux != NULL; aux = aux->siguiente){
         printf("%d ", aux->codigo);
     }

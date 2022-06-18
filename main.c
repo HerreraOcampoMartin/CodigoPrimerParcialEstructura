@@ -1,20 +1,24 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "TDA/Pila.h"
 #include "TDA/ListaOrdenada.h"
 #include "TDA/ListaDoblementeEnlazada.h"
 #include "TDA/Diccionario.h"
+#include "TDA/Cola.h"
 
 void usarListaOrdenada();
 void usarPila();
 void usarListaDoblementeEnlazada();
 void usarDiccionario();
+void usarCola();
 
 int main() {
 
     //usarListaOrdenada();
-    usarPila();
+    //usarPila();
     //usarListaDoblementeEnlazada();
     //usarDiccionario();
+    usarCola();
 
     return 0;
 }
@@ -39,6 +43,7 @@ void usarListaOrdenada() {
 }
 
 void usarPila() {
+    // Último que entra, primero que sale. (LIFO = Last In, First Out)
     Pila *pila = crearPila();
 
     apilar(pila, crearNodo(321));
@@ -52,12 +57,12 @@ void usarPila() {
     imprimirPila(pila);
 
     eliminarDePila(pila, 321);
-    desapilar(pila);
+    Nodo *desapilado = desapilar(pila);
 
     imprimirPila(pila);
 
     liberarPila(pila);
-
+    free(desapilado);
 }
 
 void usarListaDoblementeEnlazada(){
@@ -100,4 +105,24 @@ void usarDiccionario(){
 
     liberarDiccionario(dic);
 
+}
+
+void usarCola(){
+    // Primero que entra, primero que sale. (FIFO = First In, First Out)
+    Cola *cola = crearCola();
+
+    encolarNodo(cola, crearNodo(43));
+    encolarNodo(cola, crearNodo(435));
+    encolarNodo(cola, crearNodo(543));
+    encolarNodo(cola, crearNodo(87));
+    encolarNodo(cola, crearNodo(9));
+
+    imprimirCola(cola);
+
+    Nodo *desencolado = desencolarNodo(cola);
+
+    imprimirCola(cola);
+
+    free(desencolado);
+    liberarCola(cola);
 }

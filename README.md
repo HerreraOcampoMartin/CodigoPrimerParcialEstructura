@@ -7,3 +7,4 @@ Tipos de datos abstractos añadidos hasta el momento:
 - Pila
 - Lista doblemente enlazada
 - Diccionario
+- Cola

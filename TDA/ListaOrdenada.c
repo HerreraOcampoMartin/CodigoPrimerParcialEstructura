@@ -79,11 +79,11 @@ void imprimirListaOrdenada(ListaOrdenada *lista){
     Nodo *aux = lista->primero;
 
     if(aux == NULL){
-        printf("La lista esta vacía.\n");
+        printf("La lista ordenada esta vacía.\n");
         return;
     }
 
-    printf("\nLista:\n");
+    printf("\nLista ordenada:\n");
     for(; aux != NULL; aux = aux->siguiente){
         printf("%d ", aux->codigo);
     }

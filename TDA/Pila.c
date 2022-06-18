@@ -26,12 +26,13 @@ Nodo *desapilar(Pila *pila){
     // - Desapilar siempre elimina el primero
     // - En este caso estoy retornando el nodo, pero podría no devolver nada y
     //   liberar el nodo
-    if(pila->primero == NULL){
+    Nodo *desapilado = pila->primero;
+
+    if(desapilado == NULL){
         return NULL;
     }
 
-    Nodo *desapilado = pila->primero;
-    pila->primero = pila->primero->siguiente;
+    pila->primero = desapilado->siguiente;
     desapilado->siguiente = NULL; // Lo desvinculo de la pila totalmente
     pila->tam--;
 

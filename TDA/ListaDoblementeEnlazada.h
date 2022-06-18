@@ -17,5 +17,6 @@ NodoDoblementeEnlazado *crearNodoDoblementeEnlazado(int codigo);
 void insertarEnDoblementeEnlazada(ListaDoblementeEnlazada *lista, NodoDoblementeEnlazado *nodoAInsertar);
 void eliminarDeDoblementeEnlazada(ListaDoblementeEnlazada *lista, int codigoAEliminar);
 void imprimirListaDoblementeEnlazada(ListaDoblementeEnlazada *lista);
+void liberarListaDoblementeEnlazada(ListaDoblementeEnlazada *lista);
 
 #endif

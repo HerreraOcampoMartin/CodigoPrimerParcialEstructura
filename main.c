@@ -12,9 +12,9 @@ void usarDiccionario();
 int main() {
 
     //usarListaOrdenada();
-    //usarPila();
+    usarPila();
     //usarListaDoblementeEnlazada();
-    usarDiccionario();
+    //usarDiccionario();
 
     return 0;
 }
@@ -31,7 +31,7 @@ void usarListaOrdenada() {
 
     imprimirListaOrdenada(lista);
 
-    eliminarDeListaOrdenada(lista, 1);
+    eliminarDeListaOrdenada(lista, 0);
 
     imprimirListaOrdenada(lista);
 
@@ -51,7 +51,7 @@ void usarPila() {
 
     imprimirPila(pila);
 
-    eliminarDePila(pila, 43);
+    eliminarDePila(pila, 321);
     desapilar(pila);
 
     imprimirPila(pila);
@@ -73,9 +73,11 @@ void usarListaDoblementeEnlazada(){
 
     imprimirListaDoblementeEnlazada(lista);
 
-    eliminarDeDoblementeEnlazada(lista, 321);
+    eliminarDeDoblementeEnlazada(lista, 65);
 
     imprimirListaDoblementeEnlazada(lista);
+
+    liberarListaDoblementeEnlazada(lista);
 
 }
 
@@ -95,5 +97,7 @@ void usarDiccionario(){
     printf("Si es 0, entonces no pertenece. Si es 1, sí.\n");
 
     imprimirDiccionario(dic);
+
+    liberarDiccionario(dic);
 
 }

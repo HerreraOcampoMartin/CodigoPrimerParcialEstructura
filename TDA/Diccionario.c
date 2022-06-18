@@ -90,3 +90,21 @@ void imprimirDiccionario(Diccionario *dic){
         printf("* %d\n", aux->codigo);
     }
 }
+
+void liberarDiccionario(Diccionario *dic) {
+    Nodo *aux = dic->primero;
+    if(aux != NULL){
+        while(aux->siguiente != NULL){
+            Nodo *ant = aux;
+            printf("Liberando %d.\n", ant->codigo);
+            aux = aux->siguiente;
+            free(ant);
+        }
+
+        printf("Liberando %d.\n", aux->codigo);
+        free(aux);
+    }
+
+    free(dic);
+    printf("Diccionario liberado.\n");
+}

@@ -106,4 +106,7 @@ void liberarListaOrdenada(ListaOrdenada *lista){
         printf("Liberando %d.\n", aux->codigo);
         free(aux);
     }
+
+    free(lista);
+    printf("Lista ordenada liberada.\n");
 }

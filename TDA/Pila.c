@@ -103,6 +103,9 @@ void liberarPila(Pila *pila){
         printf("Liberando %d.\n", aux->codigo);
         free(aux);
     }
+
+    free(pila);
+    printf("Pila liberada.\n");
 }
 
 

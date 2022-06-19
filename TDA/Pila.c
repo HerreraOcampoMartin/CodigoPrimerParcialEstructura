@@ -62,13 +62,12 @@ void eliminarDePila(Pila *pila, int codigoABuscar){
             //primer caso, el elemento que queremos eliminar se encuentra en el comienzo de la lista
             pila->primero = act->siguiente;
             free(act);
-            pila->tam--;
         } else {
             //segundo caso, el elemento que queremos eliminar se encuentra en el "medio" de dos nodos
             ant->siguiente = act->siguiente;
             free(act);
-            pila->tam--;
         }
+        pila->tam--;
 
     }
 

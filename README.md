@@ -11,3 +11,5 @@ Tipos de datos abstractos añadidos hasta el momento:
 
 ## Posibles ejercicios extra
 - Operaciones de conjuntos (intersección, unión, etc).
+- Concatenar TDA (Ejercicios 14 y 15 - Guía 1)
+- Invertir TDA (Ejercicios 17 y 18 - Guía 1)

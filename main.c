@@ -16,9 +16,9 @@ int main() {
 
     //usarListaOrdenada();
     //usarPila();
-    //usarListaDoblementeEnlazada();
+    usarListaDoblementeEnlazada();
     //usarDiccionario();
-    usarCola();
+    //usarCola();
 
     return 0;
 }
@@ -78,7 +78,7 @@ void usarListaDoblementeEnlazada(){
 
     imprimirListaDoblementeEnlazada(lista);
 
-    eliminarDeDoblementeEnlazada(lista, 65);
+    eliminarDeDoblementeEnlazada(lista, 1);
 
     imprimirListaDoblementeEnlazada(lista);
 

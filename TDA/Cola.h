@@ -6,6 +6,7 @@
 typedef struct cola{
     int tam;
     Nodo *primero;
+    Nodo *ultimo
 } Cola;
 
 Cola *crearCola();

@@ -24,22 +24,25 @@ Nodo *desencolarNodo(Cola *cola) {
         cola->tam--;
         aux->siguiente = NULL; // Lo desvinculo de la lista
     }
+    if (aux == cola->ultimo){
+        cola->ultimo = NULL;
+    }
 
     return aux;
 }
 
 void encolarNodo(Cola *cola, Nodo *nuevo) {
-    Nodo *aux = cola->primero;
+    Nodo *aux = cola->ultimo;
 
-    if (aux == NULL){
+    if(aux == NULL){
         cola->primero = nuevo;
+        cola->ultimo = nuevo;
         cola->tam++;
         return;
     }
 
-    for (; aux->siguiente != NULL; aux = aux->siguiente){}
-
     aux->siguiente = nuevo;
+    cola->ultimo = nuevo;
     cola->tam++;
 }
 

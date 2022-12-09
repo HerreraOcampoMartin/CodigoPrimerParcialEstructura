@@ -5,20 +5,23 @@
 #include "TDA/ListaDoblementeEnlazada.h"
 #include "TDA/Diccionario.h"
 #include "TDA/Cola.h"
+#include "TDA/Arbol.h"
 
 void usarListaOrdenada();
 void usarPila();
 void usarListaDoblementeEnlazada();
 void usarDiccionario();
 void usarCola();
+void usarArbol();
 
 int main() {
 
     //usarListaOrdenada();
     //usarPila();
-    usarListaDoblementeEnlazada();
+    //usarListaDoblementeEnlazada();
     //usarDiccionario();
     //usarCola();
+    usarArbol();
 
     return 0;
 }
@@ -125,4 +128,26 @@ void usarCola(){
 
     free(desencolado);
     liberarCola(cola);
+}
+
+void usarArbol(){
+    NodoArbol *raiz = NULL;
+
+    insertarEnArbol(&raiz, crearNodoArbol(100));
+    insertarEnArbol(&raiz, crearNodoArbol(120));
+    insertarEnArbol(&raiz, crearNodoArbol(110));
+    insertarEnArbol(&raiz, crearNodoArbol(90));
+    insertarEnArbol(&raiz, crearNodoArbol(652));
+
+    int prof = profundidadArbol(raiz);
+    printf("%d\n", prof);
+
+    if(buscarNodoArbol(raiz, 1) == NULL){
+        printf("No existe el nodo con ese valor =(\n");
+    } else {
+        printf("Existe el nodo con ese valor.\n");
+    }
+
+    imprimirPreOrden(raiz);
+
 }

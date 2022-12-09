@@ -15,3 +15,7 @@ Tipos de datos abstractos añadidos hasta el momento:
 - Invertir TDA (Ejercicios 17 y 18 - Guía 1)
 - Pasar los elementos de una cola a una pila y viceversa (Ejercicio 19 - Guía 1)
 - Cola circular (Ejercicio 21 - Guía 1)
+
+## Por agregar
+- Lista circular
+- Árboles

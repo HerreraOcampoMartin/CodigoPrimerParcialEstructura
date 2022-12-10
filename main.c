@@ -8,6 +8,8 @@
 #include "TDA/Arbol.h"
 #include "Dispersion/DispersionAbierta.h"
 #include "Dispersion/DispersionCerrada.h"
+#include "AlgoritmosOrdenamiento/SelectionSort.h"
+#include "AlgoritmosOrdenamiento/QuickSort.h"
 
 void usarListaOrdenada();
 void usarPila();
@@ -17,6 +19,9 @@ void usarCola();
 void usarArbol();
 void dispersionAbierta();
 void dispersionCerrada();
+void hacerSelectionSort();
+void hacerBucketSort();
+void hacerQuickSort();
 
 int main() {
 
@@ -28,7 +33,10 @@ int main() {
     //usarArbol();
 
     //dispersionAbierta();
-    dispersionCerrada();
+    //dispersionCerrada();
+
+    //hacerSelectionSort();
+    hacerQuickSort();
 
     return 0;
 }
@@ -195,4 +203,32 @@ void dispersionCerrada(){
 
     miembroHashCerrado(tablaHash, "JUAN");
     miembroHashCerrado(tablaHash, "njenfeks");
+}
+
+void hacerSelectionSort() {
+    int arreglo[] = {64, 25, 12, 22, 11};
+
+    int tamano = sizeof(arreglo) / sizeof(int);
+
+    printf("\nArreglo sin ordenar:\n");
+    imprimirArregloSelection(arreglo, tamano);
+
+    selectionSort(arreglo, tamano);
+
+    printf("\nArreglo ordenado:\n");
+    imprimirArregloSelection(arreglo, tamano);
+}
+
+void hacerQuickSort() {
+    int lista[] ={5,2,7,3,9,4,8};
+
+    int size = sizeof(lista) / sizeof(int);
+
+    printf("Lista Desordenada:\n");
+    imprimirArregloQuick(lista, size);
+
+    quickSort(lista, size);
+
+    printf("Lista Ordenada:\n");
+    imprimirArregloQuick(lista, size);
 }

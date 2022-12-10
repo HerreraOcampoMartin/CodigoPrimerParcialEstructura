@@ -36,8 +36,8 @@ void insertarOrdenado(ListaOrdenada *lista, Nodo *nodoAInsertar){
             lista->primero = nodoAInsertar;
             nodoAInsertar->siguiente = act;
         } else {
-            nodoAInsertar->siguiente = act;
             ant->siguiente = nodoAInsertar;
+            nodoAInsertar->siguiente = act;
         }
 
     }

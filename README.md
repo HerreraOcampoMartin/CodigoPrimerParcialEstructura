@@ -8,6 +8,7 @@ Tipos de datos abstractos añadidos hasta el momento:
 - Lista doblemente enlazada
 - Diccionario
 - Cola
+- Árbol
 
 ## Posibles ejercicios extra
 - Operaciones de conjuntos (intersección, unión, etc).
@@ -18,4 +19,3 @@ Tipos de datos abstractos añadidos hasta el momento:
 
 ## Por agregar
 - Lista circular
-- Árboles

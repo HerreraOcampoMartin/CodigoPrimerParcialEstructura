@@ -6,6 +6,7 @@
 #include "TDA/Diccionario.h"
 #include "TDA/Cola.h"
 #include "TDA/Arbol.h"
+#include "Dispersion/DispersionAbierta.h"
 
 void usarListaOrdenada();
 void usarPila();
@@ -13,6 +14,7 @@ void usarListaDoblementeEnlazada();
 void usarDiccionario();
 void usarCola();
 void usarArbol();
+void dispersionAbierta();
 
 int main() {
 
@@ -21,7 +23,9 @@ int main() {
     //usarListaDoblementeEnlazada();
     //usarDiccionario();
     //usarCola();
-    usarArbol();
+    //usarArbol();
+
+    dispersionAbierta();
 
     return 0;
 }
@@ -150,4 +154,20 @@ void usarArbol(){
 
     imprimirPreOrden(raiz);
 
+}
+
+void dispersionAbierta(){
+    ListaHash *tablaHash[__B__];
+    inicializarTablaHashing(tablaHash);
+
+    insertarHash(tablaHash, nuevoNodoHash("JUAN"));
+    insertarHash(tablaHash, nuevoNodoHash("FRANCO"));
+    insertarHash(tablaHash, nuevoNodoHash("HERNAN"));
+    insertarHash(tablaHash, nuevoNodoHash("MATIAS"));
+    insertarHash(tablaHash, nuevoNodoHash("jwegdfv"));
+
+    imprimirTablaHashing(tablaHash);
+
+    miembroHash(tablaHash, "JUAN");
+    miembroHash(tablaHash, "fsfregmerm");
 }

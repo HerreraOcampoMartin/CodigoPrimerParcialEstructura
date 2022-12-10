@@ -7,6 +7,7 @@
 #include "TDA/Cola.h"
 #include "TDA/Arbol.h"
 #include "Dispersion/DispersionAbierta.h"
+#include "Dispersion/DispersionCerrada.h"
 
 void usarListaOrdenada();
 void usarPila();
@@ -15,6 +16,7 @@ void usarDiccionario();
 void usarCola();
 void usarArbol();
 void dispersionAbierta();
+void dispersionCerrada();
 
 int main() {
 
@@ -25,7 +27,8 @@ int main() {
     //usarCola();
     //usarArbol();
 
-    dispersionAbierta();
+    //dispersionAbierta();
+    dispersionCerrada();
 
     return 0;
 }
@@ -170,4 +173,26 @@ void dispersionAbierta(){
 
     miembroHash(tablaHash, "JUAN");
     miembroHash(tablaHash, "fsfregmerm");
+}
+
+void dispersionCerrada(){
+    char *tablaHash[__B__];
+    inicializarTablaHashingCerrado(tablaHash);
+
+    insertarHashCerrado(tablaHash, "JUAN");
+    insertarHashCerrado(tablaHash, "MATIAS");
+    insertarHashCerrado(tablaHash, "HERNAN");
+    insertarHashCerrado(tablaHash, "FRANCO");
+    insertarHashCerrado(tablaHash, "MARTIN");
+    insertarHashCerrado(tablaHash, "SOFIA");
+    insertarHashCerrado(tablaHash, "FEDERICO");
+    insertarHashCerrado(tablaHash, "FEDERICO");
+    insertarHashCerrado(tablaHash, "FEDERICO");
+    insertarHashCerrado(tablaHash, "FEDERICO");
+    insertarHashCerrado(tablaHash, "FEDERICO");
+
+    imprimirTablaHashingCerrado(tablaHash);
+
+    miembroHashCerrado(tablaHash, "JUAN");
+    miembroHashCerrado(tablaHash, "njenfeks");
 }

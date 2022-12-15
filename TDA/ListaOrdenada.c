@@ -97,11 +97,9 @@ void liberarListaOrdenada(ListaOrdenada *lista){
 
     while(aux != NULL){
         Nodo *ant = aux;
-        printf("Liberando %d.\n", ant->codigo);
         aux = aux->siguiente;
         free(ant);
     }
 
     free(lista);
-    printf("Lista ordenada liberada.\n");
 }

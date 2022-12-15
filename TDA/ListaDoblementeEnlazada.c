@@ -94,18 +94,11 @@ void imprimirListaDoblementeEnlazada(ListaDoblementeEnlazada *lista){
 void liberarListaDoblementeEnlazada(ListaDoblementeEnlazada *lista) {
     NodoDoblementeEnlazado *aux = lista->primero;
 
-    if(aux != NULL){
-        while(aux->siguiente != NULL){
-            NodoDoblementeEnlazado *ant = aux;
-            printf("Liberando %d.\n", ant->codigo);
-            aux = aux->siguiente;
-            free(ant);
-        }
-
-        printf("Liberando %d.\n", aux->codigo);
-        free(aux);
+    while(aux != NULL){
+        NodoDoblementeEnlazado *ant = aux;
+        aux = aux->siguiente;
+        free(ant);
     }
 
     free(lista);
-    printf("Lista doblemente enlazada liberada.\n");
 }

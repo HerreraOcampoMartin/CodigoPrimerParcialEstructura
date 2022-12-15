@@ -92,20 +92,13 @@ void imprimirPila(Pila *pila){
 void liberarPila(Pila *pila){
     Nodo *aux = pila->primero;
 
-    if(aux != NULL){
-        while(aux->siguiente != NULL){
-            Nodo *ant = aux;
-            printf("Liberando %d.\n", ant->codigo);
-            aux = aux->siguiente;
-            free(ant);
-        }
-
-        printf("Liberando %d.\n", aux->codigo);
-        free(aux);
+    while(aux != NULL){
+        Nodo *ant = aux;
+        aux = aux->siguiente;
+        free(ant);
     }
 
     free(pila);
-    printf("Pila liberada.\n");
 }
 
 

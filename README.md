@@ -19,3 +19,11 @@ Tipos de datos abstractos añadidos hasta el momento:
 
 ## Por agregar
 - Lista circular
+
+## Por estudiar
+- Eliminar de lista doblemente enlazada
+- Eliminar de ordenada (?)
+- Todo de árbol
+- Algoritmos de ordenamiento
+- Dispersion
+- Insertar ordenado lista doblemente enlazada
